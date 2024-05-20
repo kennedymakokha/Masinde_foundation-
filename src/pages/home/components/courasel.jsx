@@ -1,16 +1,45 @@
-import React from 'react'
-import ImageSlider from './imageSlider'
+import { Carousel } from "nuka-carousel";
 
-function Courasel() {
+import useMedia from "use-media";
+import { slider1, slider2 } from "../../../utils/images";
+import ImageSlider, { AutoSlider } from "./imageSlider";
+
+const Testimonials = () => {
+    const isWide = useMedia({ minWidth: "976px" });
+    let testimonials = [{ title: "WORK HARDDISCOVER YOUR BODY", image: slider2 , },
+    { title: "WORK HARDDISCOVER 2024", image: slider1 }
+    ]
+    const controls = {
+        centerLeft: "<",
+        centerRight: ">",
+    };
+
     return (
-        <ImageSlider
-            images={[
-                "https://picsum.photos/id/10/960/540",
-                "https://picsum.photos/id/11/960/540",
-                "https://picsum.photos/id/12/960/540",
-            ]}
-        />
-    )
-}
+       
+            <AutoSlider slides={testimonials} />
+       
 
-export default Courasel
+        // <div className="container mx-auto flex flex-col   space-y-28 md:mb-32">
+
+        //     <Carousel
+        //         autoplay={true}
+        //         autoplayInterval={5000}
+        //         scrollMode={"remainder"}
+        //         // slidesToShow={isWide ? 3 : 1}
+        //         // withoutControls={isWide ? true : false}
+        //         // wrapAround={isWide ? true : false}
+        //         pauseOnHover={false}
+        //         renderCenterLeftControls={controls.centerLeft}
+        //         renderCenterRightControls={controls.centerRight}
+        //         className="overflow-x-hidden max-w-sm lg:max-w-full"
+        //     >
+        //         {testimonials.map((testimony) => (
+        //             <ImageSlider data={testimony} />
+        //         ))}
+        //     </Carousel>
+        // </div>
+
+    );
+};
+
+export default Testimonials;

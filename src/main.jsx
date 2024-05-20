@@ -9,6 +9,7 @@ import Services from './pages/services.jsx'
 import About from './pages/about'
 import Contact from './pages/contacts'
 import Project from './pages/projects'
+import ProjectDetails from './pages/projects/details.jsx'
 import Root from './pages/root.jsx'
 
 const rootFontStyle = {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Project />,
+      },
+      {
+        path: "projects/:name",
+        element: <ProjectDetails />,
       },
 
     ],

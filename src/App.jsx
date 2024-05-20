@@ -4,8 +4,12 @@ import ImageSlider from './pages/home/components/imageSlider'
 import './App.css';
 import Navbar from './components/navbar';
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [isDark, setIsDark] = useState(false);
 
+  const handleDarkToggle = () => {
+    setIsDark(!isDark);
+  };
   return (
     <Home />
 
