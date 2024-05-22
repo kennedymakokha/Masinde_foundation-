@@ -70,7 +70,7 @@ const Navbar = ({ isDark, handleDarkToggle }) => {
                                     } ${index === navLinks.length - 1 ? "mr-0" : "mr-1"}`}
                                 onClick={() => setActive(nav.title)}
                             >
-                                <Link to={`/${nav.id}`} className={`font-semibold capitalize  ${path === nav.id ? "text-blue-600 dark:text-white  " : "text-slate-400 dark:text-black hover:text-orange-400"}  `}>{nav.title} </Link>
+                                <Link to={`/${nav.id}`} className={`font-semibold capitalize  ${path === nav.id ? "text-white  " : "text-slate-400 dark:text-black hover:text-orange-400"}  `}>{nav.title} </Link>
                                 {/* {path === nav.id && <div className="w-auto h-1 bg-blue-600"></div>} */}
                             </li>
                         </div>
@@ -79,7 +79,7 @@ const Navbar = ({ isDark, handleDarkToggle }) => {
 
                 ))}
             </ul>
-            <div className="bg-gradient-to-r from-orange-600 via-white to-orange-600 px-4 rounded-full sm:flex hidden items-center justify-center shadow-3xl text-blue-600  sm:text-[18px] text-sm ">Donate</div>
+            <div className="bg-orange-600 px-4 rounded-full sm:flex hidden items-center justify-center shadow-3xl text-white  sm:text-[18px] text-sm ">Donate</div>
             {/* <div className="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
@@ -116,7 +116,7 @@ const Navbar = ({ isDark, handleDarkToggle }) => {
                             </li>
                         ))}
                     </ul>
-                    <div className="  bg-gradient-to-r from-orange-600 via-white to-orange-600  px-4 rounded-md flex items-center justify-center shadow-3xl text-blue-600  text-sm ">Donate</div>
+                    <div className="  bg-orange-600  px-4 rounded-md flex items-center justify-center shadow-3xl text-blue-600  text-sm ">Donate</div>
 
                 </div>
             </div>

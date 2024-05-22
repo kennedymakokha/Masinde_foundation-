@@ -77,20 +77,19 @@ export const Social = ({ title, mr, path, content, data }) => {
 }
 export const TeamItem = ({ title, role, avatar }) => {
     return (
-        <div className="flex  sm:w-1/3 group w-full rounded-md  px-2 ">
+        <div className="flex  sm:w-1/3 group w-full rounded-md  px-1 ">
             <div className="w-full h-full rounded-md relative z-0">
-                <img src={avatar} alt="" className=" rounded-md" />
-
+                <img src={avatar} alt="" className=" w-full h-full object-cover rounded-md" />
                 <div className="absolute rounded-md group-hover:flex hidden inset-0 flex justify-center  bg-gradient-to-t opacity-10 from-transparent via-orange-600  to-orange-600  items-center z-10">
                 </div>
-                <div className="absolute group-hover:flex hidden rounded-md bottom-2  bg-gradient-to-b from-transparent via-orange-600  to-orange-600 h-18 w-full flex justify-center items-center z-10">
-                    <div className="flex h-full w-full  justify-between px-10 ">
+                <div className="absolute group-hover:flex hidden rounded-md bottom-0  bg-gradient-to-b from-transparent via-orange-100  to-orange-100 h-18 w-full flex justify-center items-center z-10">
+                    <div className="flex h-full w-full py-2  justify-between px-10 ">
                         {IconsData.map((social, i) => (
                             < Social key={i} data={social} />
                         ))}
                     </div>
                 </div>
-                <div className="absolute flex group-hover:hidden rounded-b-md -bottom-[0%]  bg-gradient-to-t from-transparent to-black via-black h-14 w-full flex justify-center items-center z-10">
+                <div className="absolute flex group-hover:hidden rounded-b-md -bottom-[0%]  bg-black  h-14 w-full flex justify-center items-center z-10">
                     <div className="flex  items-center rounded-b-md justify-center h-full w-full flex-col   px-10 ">
                         <h2 className="text-slate-400 dark:text-blackmode-200 text-[14px] font-bold sm:text-[18px]">{title}</h2>
                         <h2 className="text-orange-400 dark:text-blackmode-200 italic text-[14px] font-normal sm:text-[18px]">{role}</h2>

@@ -29,13 +29,13 @@ function details() {
                         <h2 className="capitalize text-3xl font-semibold text-slate-300 dark:text-blackmode-300">{details.tagline}</h2>
                     </div>
 
-                    <div className="flex my-2  border-blackmode-400 dark:border-slate-400 border-t border-b  h-20 w-full">
+                    <div className="flex my-2  border-blackmode-400 dark:border-slate-400   h-20 w-full">
                         <div className="flex w-2/3">
                             <ProjectCashItem title="Goal" amount={details.goal} />
                             <ProjectCashItem title="Raised" amount={details.attained} />
                             <ProjectCashItem title="Balance" amount={details.goal - details.attained} />
                         </div>
-                        <div className="flex w-1/3 px-2 items-center">
+                        <div className="flex w-1/3  items-center">
                             <div className="flex w-full   h-[85%]  justify-center   ">
                                 {per > 10 ? <div style={{ width: `${per}%` }} className={`${per >= 75 && "bg-gradient-to-r from-orange-400 via-orange-600 to-green-600 "}${per === 100 && "bg-gradient-to-r from-orange-400 via-orange-600 to-green-600 rounded-r-none "} bg-gradient-to-r from-blackmode-100 via-orange-600 to-orange-600   rounded-r-full  relative z-0`}>
                                     <div style={{ left: `${per - 10}%` }} className={`absolute sm:top-4  top-6 rounded-full flex justify-center text-white items-center z-10`}>
@@ -47,24 +47,27 @@ function details() {
                     </div>
                     <Paraggraph p={details.description} />
                     <Title_bare title="Cause Challenge" />
-                    <Paraggraph p={details.cause} />
+                    <div className="flex pt-4 pb-2">
+                        <Paraggraph p={details.cause} />
+                    </div>
                     <Title_bare title="Summery And Documents" />
-                    <div className="flex w-full py-2 h-20">
+                    <div className="flex w-full py-2 gap-x-4 mt-4 h-20">
                         <DownloadBTn title="research" />
                         <DownloadBTn title="research" />
                         <DownloadBTn title="research" />
                     </div>
                     <Title_bare title="Great Donners" />
-                    <div className="flex w-full gap-2 flex-wrap">
+                    <div className="flex w-full gap-2 my-10 flex-wrap">
                         {details?.donners?.slice(0, limit)?.map((don, i) => (
                             <Donar key={i} item={don} />
                         ))}
                         {details?.donners?.length > 7 && < Donar last count={count} setLimit={setLimit} />}
-                        <div className="flex items-center justify-center sm:w-full  mt-10">
+                        < Donar last count={count} setLimit={setLimit} />
+                        {/* <div className="flex items-center justify-center sm:w-full  mt-10">
                             <div className="flex sm:w-1/4 ">
                                 <Button icon title="Donate" onClick={() => setShowModal(true)} inline />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
