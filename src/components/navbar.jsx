@@ -53,7 +53,7 @@ const Navbar = ({ isDark, handleDarkToggle }) => {
             {/* Logo */}
             <img src={Logo} alt="" className="sm:h-full h-1/4 sm:w-auto w-10" />
             <div className="sm:flex hidden flex-col ">
-                <span className="font-bold text-3xl text-orange-400 dark:text-blackmode-400">Masinde</span>
+                <span className="font-bold text-3xl text-orange-400 dark:text-blackmode-400">JG Foundation</span>
                 {/* <span className="">Foundation</span> */}
             </div>
             {/* Desktop Navigation */}

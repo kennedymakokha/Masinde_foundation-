@@ -7,9 +7,7 @@ function App() {
   
   const [isDark, setIsDark] = useState(false);
 
-  const handleDarkToggle = () => {
-    setIsDark(!isDark);
-  };
+ 
   return (
     <Home />
 

@@ -34,7 +34,7 @@ function ProjectItem(props) {
                         <h2 className="text-lg dark:text-orange-600 text-slate-100 font-semibold">{props.data.title}</h2>
                     </div>
                 </div>
-                <div className="flex w-full py-3 px-2  ">
+                <div className="flex w-full py-1 px-2  ">
                     <ProjectCashItem title="Goal" amount={props.data.goal} />
                     <ProjectCashItem title="Raised" amount={props.data.attained} />
                     <ProjectCashItem title="Balance" amount={props.data.goal - props.data.attained} />
@@ -44,19 +44,18 @@ function ProjectItem(props) {
                         <h2 className=" text-[18px] font-bold text-slate-200 dark:text-slate-600">{truncate(props.data.tagline,28)}</h2>
                     </div>
                     <div className="flex h-[70px]">
-                        <p className="text-[14px] text-slate-200 dark:text-slate-600">{truncate(props.data.description,100)}</p>
+                        <p className="text-[14px] text-slate-200 dark:text-slate-600">{truncate(props.data.description,70)}</p>
                     </div>
 
                 </div>
-                <div className="flex  w-full py-3  px-4 ">
+                <div className="flex  w-full   px-4 ">
 
-                    <div className="flex  w-1/2 group  items-center justify-center   ">
-
+                    <div className="flex  w-1/3 group  items-center justify-center   ">
                         <Button title="Donate" onClick={() => setShowModal(true)} inline icon />
                     </div>
                     <Link to={`/projects/${props.data.title?.toLowerCase().replace(/\s+/g, '')
                         }`} state={{ details: props.data }}
-                        className="flex  w-1/2 group  items-center justify-center px-2  ">
+                        className="flex  w-2/3 group  items-center justify-center px-2  ">
                         <Button title="Read more" />
                     </Link>
                 </div>

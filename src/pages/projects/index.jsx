@@ -83,6 +83,16 @@ function index() {
       goal: 100000,
       attained: 30000,
 
+      image:Donation1
+
+    },
+    {
+      title: 'Mother Care',
+      description: "Lorem ? Beatae, id?, sit amet consectetur adipisicing elit",
+      tagline: "Not my Choice",
+      goal: 100000,
+      attained: 30000,
+
       image: R
 
     },
